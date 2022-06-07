@@ -8,3 +8,41 @@
   @apply focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary-700;
   @apply disabled:bg-gradient-to-r disabled:from-primary-100 disabled:to-primary-100 disabled:cursor-not-allowed;
 }
+
+.form-label {
+  @apply block text-title font-bold mb-2 text-left text-xs;
+}
+
+
+.form-input-error {
+  @apply border border-red-500;
+}
+
+.form-checkbox-label {
+  @apply block text-title font-bold text-left;
+}
+
+@layer components {
+  form input[type=text] {
+    @apply appearance-none rounded-12px  w-full py-2 px-3 text-title bg-background leading-tight text-xs;
+    @apply focus:outline-none;
+  }
+
+  form input[type=password] {
+    @apply appearance-none rounded-12px  w-full py-2 px-3 text-title bg-background leading-tight text-xs;
+    @apply focus:outline-none;
+  }
+
+  form input[type=text]:invalid,
+  form input[type=password]:invalid {
+    @apply border border-red-500;
+  }
+
+  form input[type=checkbox] {
+    @apply mr-2 leading-tight;
+  }
+}
+
+.form-error-hint {
+  @apply text-red-500 text-xs italic;
+}
