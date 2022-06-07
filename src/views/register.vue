@@ -1,8 +1,41 @@
 <template>
-  <div class="bg-img w-full h-full flex items-center justify-center py-4">
-    <div class="w-345 max-w-xs bg-white rounded shadow-md">
-      <div class="px-8 py-5 flex flex-col justify-center">
-        <img class="w-20 mx-auto mb-4" src="/src/assets/metawall1.png" alt="" />
+  <div
+    class="
+      bg-img
+      w-full
+      h-full
+      flex
+      items-center
+      justify-center
+      py-4
+      lg:bg-background lg:py-0 lg:h-screen
+    "
+  >
+    <div class="bg-white rounded shadow overflow-hidden lg:flex">
+      <div
+        class="
+          img-side
+          hidden
+          lg:w-[419px] lg:flex lg:justify-center lg:items-center
+        "
+      >
+        <img src="/src/assets/metawall1.png" alt="Logo" class="w-[210px]" />
+      </div>
+      <div
+        class="
+          w-[345px]
+          px-8
+          py-5
+          flex flex-col
+          justify-center
+          lg:px-16 lg:w-[440px]
+        "
+      >
+        <img
+          class="w-20 mx-auto mb-4 lg:hidden"
+          src="/src/assets/metawall1.png"
+          alt=""
+        />
         <h1 class="pb-30px">Let's get started!</h1>
         <form class="pb-5">
           <div class="mb-4">
@@ -41,33 +74,7 @@
           <span class="text-title">Already have an account? </span><br />
           <router-link to="/login">Login!</router-link>
         </div>
-        <div
-          class="
-            py-5
-            relative
-            after:w-full
-            after:h-px
-            after:bg-slate-100
-            after:absolute
-            after:inset-x-0
-            after:inset-y-1/2
-            z-1
-          "
-        >
-          <span
-            class="
-              relative
-              inline-block
-              px-0.5
-              text-title
-              bg-white
-              text-xs
-              z-10
-            "
-          >
-            Or Sign up with
-          </span>
-        </div>
+        <Divide text="Or Sign up with" />
         <div class="flex flex-row justify-center">
           <div class="inline-flex justify-center basis-1/4">
             <img src="/src/assets/icon/google.svg" alt="" />
@@ -77,17 +84,24 @@
           </div>
         </div>
       </div>
-      <div></div>
     </div>
   </div>
 </template>
 
 <script setup>
+import Divide from "./../components/Divide.vue";
 </script>
 
 <style lang="scss" scoped>
-.bg-img {
+.bg-img,
+.img-side {
   background: no-repeat url("src/assets/login-bg.png");
   background-size: cover;
+}
+
+.bg-img {
+  @media (min-width: 1024px) {
+    background: #f6f6f6;
+  }
 }
 </style>

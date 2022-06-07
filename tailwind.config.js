@@ -29,7 +29,12 @@ module.exports = {
         '42': '42px',
       },
       width: {
-        '345': '345px'
+        '345': '345px',
+        '419': '419px',
+        '440': '440px'
+      },
+      boxShadow: {
+        DEFAULT: '0 4px 16px 0 rgba(0, 0, 0, 0.25)',
       }
     },
   },
