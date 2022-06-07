@@ -70,6 +70,7 @@
       </div>
       <div
         class="
+          py-5
           relative
           after:w-full
           after:h-px
