@@ -580,12 +580,20 @@ form .form-check-label {
   color: rgb(102 102 102 / var(--tw-text-opacity));
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .bottom-0 {
@@ -603,6 +611,10 @@ form .form-check-label {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
 }
 
 .mb-4 {
@@ -641,6 +653,22 @@ form .form-check-label {
   height: 100%;
 }
 
+.h-\[65px\] {
+  height: 65px;
+}
+
+.h-\[42px\] {
+  height: 42px;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-\[54px\] {
+  height: 54px;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -655,6 +683,10 @@ form .form-check-label {
 
 .w-full {
   width: 100%;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .w-\[345px\] {
@@ -689,6 +721,10 @@ form .form-check-label {
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -714,14 +750,14 @@ form .form-check-label {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-secondary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(167 218 216 / var(--tw-bg-opacity));
+}
+
 .bg-background {
   --tw-bg-opacity: 1;
   background-color: rgb(246 246 246 / var(--tw-bg-opacity));
-}
-
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .py-5 {
@@ -737,6 +773,11 @@ form .form-check-label {
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .px-8 {
@@ -761,11 +802,6 @@ form .form-check-label {
   line-height: 1rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -778,11 +814,6 @@ form .form-check-label {
 .text-title {
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity));
-}
-
-.underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
 }
 
 .shadow {
@@ -892,6 +923,16 @@ form .form-check-label {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
