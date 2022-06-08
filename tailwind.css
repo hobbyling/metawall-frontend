@@ -10,7 +10,7 @@
 }
 
 .form-label {
-  @apply block text-title font-bold mb-2 text-left text-xs;
+  @apply block text-title font-bold mb-2 text-left text-sm;
 }
 
 
@@ -40,6 +40,16 @@
 
   form input[type=checkbox] {
     @apply mr-2 leading-tight;
+  }
+
+  form input[type=radio] {
+    @apply appearance-none h-3.5 w-3.5 rounded-full bg-white border border-gray-300 mr-2 cursor-pointer transition duration-200;
+    @apply checked:bg-primary-500 checked:border-primary-900;
+    @apply focus:outline-none;
+  }
+  
+  form .form-check-label {
+    @apply inline-block text-title;
   }
 }
 

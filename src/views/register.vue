@@ -3,11 +3,10 @@
     class="
       bg-img
       w-full
-      h-full
+      h-screen
       flex
       items-center
       justify-center
-      py-4
       lg:bg-background lg:py-0 lg:h-screen
     "
   >
@@ -67,7 +66,7 @@
             <!-- <p class="form-serror-hint">Please choose a password.</p> -->
           </div>
           <div class="flex items-center justify-between">
-            <button class="btn" type="button">Sign up</button>
+            <button class="btn" type="button" @click="signUp">Sign up</button>
           </div>
         </form>
         <div class="text-xs">
@@ -90,6 +89,11 @@
 
 <script setup>
 import Divide from "./../components/Divide.vue";
+import router from "../router";
+
+const signUp = async () => {
+  router.push({ path: "/get-start" });
+};
 </script>
 
 <style lang="scss" scoped>
