@@ -54,10 +54,10 @@
         <Divide text="Or" />
         <div class="flex flex-row justify-center">
           <div class="inline-flex justify-center basis-1/4">
-            <img src="/src/assets/icon/google.svg" alt="" />
+            <icon name="google" />
           </div>
           <div class="inline-flex justify-center basis-1/4">
-            <img src="/src/assets/icon/facebook.svg" alt="" />
+            <icon name="facebook" />
           </div>
         </div>
       </div>

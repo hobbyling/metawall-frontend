@@ -15,11 +15,7 @@
         <form>
           <div class="mb-4 flex justify-center relative">
             <div class="w-[118px] h-[118px] avatar rounded-full" />
-            <img
-              src="/src/assets/icon/plus.svg"
-              alt=""
-              class="absolute bottom-0 right-[30%]"
-            />
+            <icon name="plus" class="absolute bottom-0 right-[30%] h-5 w-5" />
           </div>
           <div class="mb-6">
             <label class="form-label" for="password"> Gender </label>

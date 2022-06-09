@@ -12,10 +12,10 @@
       bottom-0
     "
   >
-    <img src="/src/assets/icon/home.svg" alt="" class="w-6 h-6" />
-    <img src="/src/assets/icon/hot.svg" alt="" class="w-6 h-6" />
-    <img src="/src/assets/icon/time-sort.svg" alt="" class="w-6 h-6" />
-    <img src="/src/assets/icon/user.svg" alt="" class="w-6 h-6" />
+    <icon name="home" class="w-6 h-6" />
+    <icon name="hot" class="w-6 h-6" />
+    <icon name="time-sort" class="w-6 h-6" />
+    <icon name="user" class="w-6 h-6" />
   </div>
 </template>
 
