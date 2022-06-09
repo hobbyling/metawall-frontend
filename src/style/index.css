@@ -592,12 +592,12 @@ form .form-check-label {
   position: relative;
 }
 
-.top-0 {
-  top: 0px;
-}
-
 .bottom-0 {
   bottom: 0px;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .right-\[30\%\] {
@@ -645,12 +645,12 @@ form .form-check-label {
   display: none;
 }
 
-.h-16 {
-  height: 4rem;
+.h-\[54px\] {
+  height: 54px;
 }
 
-.h-full {
-  height: 100%;
+.h-6 {
+  height: 1.5rem;
 }
 
 .h-\[65px\] {
@@ -661,12 +661,8 @@ form .form-check-label {
   height: 42px;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
-.h-\[54px\] {
-  height: 54px;
+.h-px {
+  height: 1px;
 }
 
 .h-screen {
@@ -675,10 +671,6 @@ form .form-check-label {
 
 .h-\[118px\] {
   height: 118px;
-}
-
-.w-9\/12 {
-  width: 75%;
 }
 
 .w-full {
@@ -737,17 +729,22 @@ form .form-check-label {
   overflow: hidden;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .rounded {
   border-radius: 18px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-title {
+  --tw-bg-opacity: 1;
+  background-color: rgb(102 102 102 / var(--tw-bg-opacity));
 }
 
 .bg-secondary {
@@ -926,12 +923,12 @@ form .form-check-label {
 }
 
 @media (min-width: 768px) {
-  .md\:block {
-    display: block;
-  }
-
   .md\:hidden {
     display: none;
+  }
+
+  .md\:h-\[77px\] {
+    height: 77px;
   }
 }
 

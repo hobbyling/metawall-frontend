@@ -1,15 +1,13 @@
 <template>
-  <NavbarMobile class="md:hidden" />
-  <Header class="hidden md:block" />
+  <Navbar />
   <div class="bg-background main" />
 
   <ToolbarMobile class="md:hidden" />
 </template>
 
 <script setup>
-import NavbarMobile from "../components/MobileNavbar.vue";
+import Navbar from "../components/Navbar.vue";
 import ToolbarMobile from "../components/MobileToolbar.vue";
-import Header from "../components/Header.vue";
 </script>
 
 <style lang="scss" scoped>
