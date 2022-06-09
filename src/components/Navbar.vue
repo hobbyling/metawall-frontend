@@ -15,17 +15,26 @@
   >
     <img src="/src/assets/metawall.png" alt="logo" class="h-[42px]" />
     <div class="items-center justify-between hidden w-1/2 h-full md:flex">
-      <div class="relative h-full flex justify-center items-center w-1/3">
-        <icon name="home" color="pink" />
-        <div class="h-px w-full bg-title absolute bottom-0"></div>
-      </div>
-      <div class="relative h-full flex justify-center items-center w-1/3">
-        <icon name="hot" />
-        <div class="h-px w-full bg-title absolute bottom-0 opacity-0"></div>
-      </div>
-      <div class="relative h-full flex justify-center items-center w-1/3">
-        <icon name="time-sort" />
-        <div class="h-px w-full bg-title absolute bottom-0 opacity-0"></div>
+      <div
+        v-for="i in tabs.length"
+        :key="'tab-' + i"
+        class="
+          relative
+          h-full
+          flex
+          justify-center
+          items-center
+          w-1/3
+          cursor-pointer
+        "
+        :class="{ active: activeTab === tabs[i - 1] }"
+        @click="activeTab = tabs[i - 1]"
+      >
+        <icon
+          :name="tabs[i - 1]"
+          :color="activeTab === tabs[i - 1] ? '#FF9A9E' : ''"
+        />
+        <div class="h-px w-full bg-primary-500 absolute bottom-0 opacity-0" />
       </div>
     </div>
     <div class="flex items-center justify-end">
@@ -37,7 +46,17 @@
 </template>
 
 <script setup>
+import { reactive, ref } from "@vue/reactivity";
+
+const tabs = ref(["home", "hot", "time"]);
+
+const activeTab = ref("home");
 </script>
 
 <style lang="scss" scoped>
+.active {
+  div {
+    opacity: 1;
+  }
+}
 </style>

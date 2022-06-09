@@ -2,12 +2,12 @@
   <Navbar />
   <div class="bg-background main" />
 
-  <ToolbarMobile class="md:hidden" />
+  <Toolbar class="md:hidden" />
 </template>
 
 <script setup>
 import Navbar from "../components/Navbar.vue";
-import ToolbarMobile from "../components/MobileToolbar.vue";
+import Toolbar from "../components/Toolbar.vue";
 </script>
 
 <style lang="scss" scoped>
