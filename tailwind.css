@@ -51,6 +51,10 @@
   form .form-check-label {
     @apply inline-block text-title;
   }
+
+  textarea {
+    resize: none;
+  }
 }
 
 .form-error-hint {
