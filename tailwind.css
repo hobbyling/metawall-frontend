@@ -60,3 +60,11 @@
 .form-error-hint {
   @apply text-red-500 text-xs italic;
 }
+
+/* .side-bar-item{
+  @apply flex justify-start items-center mb-5;
+}
+
+.side-bar-item > span {
+  @apply text-title ml-4;
+} */

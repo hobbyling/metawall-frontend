@@ -10,11 +10,11 @@
       px-5
       fixed
       top-0
-      md:h-[77px]
+      lg:h-[77px]
     "
   >
     <img src="/src/assets/metawall.png" alt="logo" class="h-[42px]" />
-    <div class="items-center justify-between hidden w-1/2 h-full md:flex">
+    <div class="items-center justify-between hidden w-1/2 h-full lg:flex">
       <div
         v-for="i in tabs.length"
         :key="'tab-' + i"
