@@ -24,12 +24,12 @@
 <script setup>
 </script>
 
-<style lang="postcssc" scoped>
+<style lang="scss" scoped>
 .side-bar-item {
   @apply flex justify-start items-center mb-5;
-}
 
-.side-bar-item > span {
-  @apply text-title ml-4;
+  > span {
+    @apply text-title ml-4;
+  }
 }
 </style>

@@ -1,0 +1,12 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./form.scss";
+
+.btn {
+  @apply w-full h-42 rounded-12px text-white font-bold ease-in duration-300 bg-gradient-to-r from-primary-500 to-primary-300;
+  @apply hover:bg-gradient-to-r hover:from-primary-500 hover:to-primary-500;
+  @apply focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary-700;
+  @apply disabled:bg-gradient-to-r disabled:from-primary-100 disabled:to-primary-100 disabled:cursor-not-allowed;
+}
+

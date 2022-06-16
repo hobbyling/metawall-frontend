@@ -1,0 +1,51 @@
+.form-label {
+  @apply block text-title font-bold mb-2 text-left text-sm;
+}
+
+
+.form-input-error {
+  @apply border border-red-500;
+}
+
+.form-checkbox-label {
+  @apply block text-title font-bold text-left;
+}
+
+@layer components {
+  form input[type=text] {
+    @apply appearance-none rounded-12px  w-full py-2 px-3 text-title bg-background leading-tight text-xs;
+    @apply focus:outline-none;
+  }
+
+  form input[type=password] {
+    @apply appearance-none rounded-12px  w-full py-2 px-3 text-title bg-background leading-tight text-xs;
+    @apply focus:outline-none;
+  }
+
+  form input[type=text]:invalid,
+  form input[type=password]:invalid {
+    @apply border border-red-500;
+  }
+
+  form input[type=checkbox] {
+    @apply mr-2 leading-tight;
+  }
+
+  form input[type=radio] {
+    @apply appearance-none h-3.5 w-3.5 rounded-full bg-white border border-gray-300 mr-2 cursor-pointer transition duration-200;
+    @apply checked:bg-primary-500 checked:border-primary-900;
+    @apply focus:outline-none;
+  }
+  
+  form .form-check-label {
+    @apply inline-block text-title;
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+
+.form-error-hint {
+  @apply text-red-500 text-xs italic;
+}

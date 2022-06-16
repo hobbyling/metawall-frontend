@@ -116,7 +116,7 @@
 
 <script setup>
 import { ref } from "@vue/reactivity";
-
+import contenteditable from "vue-contenteditable";
 const comments = ref([
   {
     avatar: "",

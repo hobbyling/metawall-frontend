@@ -16,6 +16,7 @@ module.exports = {
         },
         secondary: '#A7DAD8',
         background: '#F6F6F6',
+        subbackground: '#FCFDFD',
         title: '#666666'
       },
       padding: {
