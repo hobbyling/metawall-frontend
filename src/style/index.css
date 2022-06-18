@@ -996,7 +996,7 @@ textarea {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-title {
+.text-title-500 {
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity));
 }
@@ -1094,7 +1094,7 @@ textarea {
 }
 
 .side-bar-item > span {
-  @apply text-title ml-4;
+  @apply text-title-500 ml-4;
 } */
 
 .after\:absolute::after {

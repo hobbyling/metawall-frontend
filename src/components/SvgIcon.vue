@@ -1,8 +1,9 @@
 <template>
   <svg
     :class="[svgClass, addClass]"
+    class="ease-in duration-200"
     v-bind="$attrs"
-    :style="{ color: color, width: size.width, height: size.height }"
+    :style="{ width: size.width, height: size.height }"
   >
     <use :xlink:href="iconName" />
   </svg>
@@ -47,8 +48,6 @@ const svgClass = computed(() => {
 
 <style lang='scss'>
 .svg-icon {
-  // width: 1.2em;
-  // height: 1.2em;
   fill: currentColor;
   vertical-align: middle;
 }

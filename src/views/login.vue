@@ -38,7 +38,7 @@
             <!-- <p class="form-serror-hint">Please choose a password.</p> -->
           </div>
           <div class="mb-6">
-            <label class="block text-title font-bold text-left">
+            <label class="block text-title-500 font-bold text-left">
               <input type="checkbox" />
               <span class="text-sm"> Remember me </span>
             </label>
@@ -48,7 +48,7 @@
           </div>
         </form>
         <div class="text-xs">
-          <span class="text-title">Don’t have an account? </span><br />
+          <span class="text-title-500">Don’t have an account? </span><br />
           <router-link to="/register">Sign up for free!</router-link>
         </div>
         <Divide text="Or" />

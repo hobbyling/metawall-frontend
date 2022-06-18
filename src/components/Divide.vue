@@ -12,7 +12,9 @@
       z-1
     "
   >
-    <span class="relative inline-block px-0.5 text-title bg-white text-xs z-10">
+    <span
+      class="relative inline-block px-0.5 text-title-500 bg-white text-xs z-10"
+    >
       {{ props.text }}
     </span>
   </div>

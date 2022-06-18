@@ -1,12 +1,16 @@
 <template>
-  <div class="bg-white rounded-2xl p-4">
+  <div
+    class="bg-white rounded-2xl p-4"
+    v-for="(post, idx) in posts"
+    :key="`post-${idx}`"
+  >
     <!-- header -->
     <div class="flex justify-between items-center">
       <div class="flex justify-start items-center">
         <div class="h-10 w-10 bg-secondary rounded-full" />
         <div class="flex flex-col justify-center items-start ml-5">
-          <span class="text-left">Karim Saif</span>
-          <span class="text-left">2022.06.01 17:58</span>
+          <span class="text-left">{{ post.name }}</span>
+          <span class="text-left">{{ post.time }}</span>
         </div>
       </div>
       <icon name="dot" class="opacity-40" />
@@ -14,7 +18,7 @@
 
     <!-- content -->
     <div class="my-5">
-      <div class="mb-3 text-left">jiojiojojoji</div>
+      <div class="mb-3 text-left">{{ post.content }}</div>
       <div class="h-44 bg-background rounded-2xl"></div>
     </div>
 
@@ -27,7 +31,10 @@
           :size="{ width: '1.5rem', height: '1.5rem' }"
         />
       </div>
-      <div class="relative">
+      <div
+        class="relative cursor-pointer"
+        @click="post.showComment = !post.showComment"
+      >
         <div
           class="
             flex
@@ -51,7 +58,7 @@
         <icon name="chat" :size="{ width: '1.5rem', height: '1.5rem' }" />
       </div>
     </div>
-    <p class="text-title text-left my-4">2300 likes</p>
+    <p class="text-title-500 text-left my-4">{{ post.likes }} likes</p>
 
     <!-- send comment -->
     <div class="py-2 flex justify-between items-start">
@@ -76,12 +83,15 @@
       <icon
         name="send"
         :size="{ width: '1.5rem', height: '1.5rem' }"
-        class="mt-2"
+        class="mt-2 cursor-pointer hover:text-primary-500"
       />
     </div>
 
     <!-- comments -->
-    <div class="mt-3">
+    <div
+      class="mt-3 ease-in duration-300"
+      :class="{ hidden: !post.showComment }"
+    >
       <div
         class="flex w-full justify-between mt-3"
         v-for="(item, key) in comments"
@@ -99,7 +109,7 @@
               color-title
             "
           >
-            <span>{{ item.account }}</span>
+            <span>{{ item.name }}</span>
             <span class="opacity-50">{{ item.time }}</span>
             <div class="text-base my-2">{{ item.comment }}</div>
           </div>
@@ -117,16 +127,29 @@
 <script setup>
 import { ref } from "@vue/reactivity";
 import contenteditable from "vue-contenteditable";
+const posts = ref([
+  {
+    avatar: "",
+    name: "Karim Saif",
+    time: "2022.06.01 17:58",
+    content: "hihihihi",
+    img: "",
+    likes: 2300,
+    comments: 99,
+    showComment: false,
+  },
+]);
+
 const comments = ref([
   {
     avatar: "",
-    account: "Steve Jobs",
+    name: "Steve Jobs",
     time: "2022.05.31 12:00",
     comment: "It is Cool!!!!",
   },
   {
     avatar: "",
-    account: "Karim Saif",
+    name: "Karim Saif",
     time: "2022.05.31 13:06",
     comment: "Thank you~",
   },

@@ -70,7 +70,7 @@
           </div>
         </form>
         <div class="text-xs">
-          <span class="text-title">Already have an account? </span><br />
+          <span class="text-title-500">Already have an account? </span><br />
           <router-link to="/login">Login!</router-link>
         </div>
         <Divide text="Or Sign up with" />

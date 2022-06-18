@@ -10,7 +10,7 @@
 }
 
 .form-label {
-  @apply block text-title font-bold mb-2 text-left text-sm;
+  @apply block text-title-500 font-bold mb-2 text-left text-sm;
 }
 
 
@@ -19,17 +19,17 @@
 }
 
 .form-checkbox-label {
-  @apply block text-title font-bold text-left;
+  @apply block text-title-500 font-bold text-left;
 }
 
 @layer components {
   form input[type=text] {
-    @apply appearance-none rounded-12px  w-full py-2 px-3 text-title bg-background leading-tight text-xs;
+    @apply appearance-none rounded-12px  w-full py-2 px-3 text-title-500 bg-background leading-tight text-xs;
     @apply focus:outline-none;
   }
 
   form input[type=password] {
-    @apply appearance-none rounded-12px  w-full py-2 px-3 text-title bg-background leading-tight text-xs;
+    @apply appearance-none rounded-12px  w-full py-2 px-3 text-title-500 bg-background leading-tight text-xs;
     @apply focus:outline-none;
   }
 
@@ -49,7 +49,7 @@
   }
   
   form .form-check-label {
-    @apply inline-block text-title;
+    @apply inline-block text-title-500;
   }
 
   textarea {
@@ -66,5 +66,5 @@
 }
 
 .side-bar-item > span {
-  @apply text-title ml-4;
+  @apply text-title-500 ml-4;
 } */

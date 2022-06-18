@@ -17,7 +17,11 @@ module.exports = {
         secondary: '#A7DAD8',
         background: '#F6F6F6',
         subbackground: '#FCFDFD',
-        title: '#666666'
+        title: {
+          500: '#666666',
+          300: 'rgba(102, 102, 102, 0.4)'
+        },
+        modalbackground: 'rgba(177, 177, 177, 0.5)'
       },
       padding: {
         '30px': '30px',

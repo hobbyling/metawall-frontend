@@ -32,14 +32,28 @@
       >
         <icon
           :name="tabs[i - 1]"
-          :color="activeTab === tabs[i - 1] ? '#FF9A9E' : ''"
+          :class="[
+            'hover:text-primary-500',
+            { 'text-primary-500': activeTab === tabs[i - 1] },
+          ]"
         />
-        <div class="h-px w-full bg-primary-500 absolute bottom-0 opacity-0" />
+        <div
+          class="
+            h-px
+            w-full
+            bg-primary-500
+            absolute
+            bottom-0
+            opacity-0
+            ease-in
+            duration-200
+          "
+        />
       </div>
     </div>
     <div class="flex items-center justify-end">
       <icon name="search" />
-      <icon name="add" class="ml-5" />
+      <icon name="add" class="ml-5 cursor-pointer" @click="openModalPost()" />
       <div class="rounded w-6 h-6 bg-secondary ml-5" />
     </div>
   </div>
@@ -47,6 +61,9 @@
 
 <script setup>
 import { reactive, ref } from "@vue/reactivity";
+import modalStore from "./../stores/modalStore";
+const modal = modalStore();
+const { openModalPost } = modal;
 
 const tabs = ref(["home", "hot", "time"]);
 

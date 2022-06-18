@@ -1,7 +1,18 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 const routes = [
   {
-    path: "/", component: () => import("../views/index.vue"),
+    path: "/",
+    component: () => import("../views/index.vue"),
+    children: [
+      {
+        path: '',
+        component: () => import("../components/Home.vue"),
+      },
+      {
+        path: ':id',
+        component: () => import("../components/pages/Profile.vue"),
+      },
+    ]
   },
   {
     path: "/login", component: () => import("../views/login.vue"),
@@ -13,7 +24,7 @@ const routes = [
     path: "/get-start", component: () => import("../views/getStart.vue"),
   },
   {
-    path: "/about", component: () => import("../views/about.vue"),
+    path: "/:id", component: () => import("../views/about.vue"),
   }
 ]
 export default createRouter({
