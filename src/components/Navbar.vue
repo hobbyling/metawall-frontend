@@ -11,9 +11,12 @@
       fixed
       top-0
       lg:h-[77px]
+      z-30
     "
   >
-    <img src="/src/assets/metawall.png" alt="logo" class="h-[42px]" />
+    <router-link to="/">
+      <img src="/src/assets/metawall.png" alt="logo" class="h-[42px]" />
+    </router-link>
     <div class="items-center justify-between hidden w-1/2 h-full lg:flex">
       <div
         v-for="i in tabs.length"

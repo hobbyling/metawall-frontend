@@ -1,6 +1,19 @@
 <template>
   <Navbar />
-  <div class="bg-background main px-5 py-7 flex justify-center">
+  <div
+    class="
+      bg-background
+      main
+      px-5
+      py-7
+      flex
+      justify-center
+      h-fit
+      mt-[65px]
+      mb-[54px]
+      lg:mb-0
+    "
+  >
     <router-view />
   </div>
 
@@ -22,8 +35,4 @@ const { openModalPost } = modal;
 </script>
 
 <style lang="scss" scoped>
-.main {
-  height: calc(100vh - 65px);
-  margin-top: 65px;
-}
 </style>

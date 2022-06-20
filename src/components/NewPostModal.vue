@@ -6,7 +6,8 @@
       transition
       duration-300
       ease-in-out
-      z-10
+      z-50
+      h-fit
       absolute
       top-0
       right-0
