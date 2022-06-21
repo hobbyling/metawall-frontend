@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex flex-col lg:grid lg:grid-cols-2 lg:gap-4">
+  <div class="container h-screen flex flex-col lg:grid lg:grid-cols-2 lg:gap-4">
     <div
       class="
         bg-white
@@ -13,31 +13,21 @@
         items-center
       "
     >
-      <div
-        class="
-          flex flex-col
-          justify-center
-          items-center
-          lg:flex-row lg:items-center lg:justify-start
-        "
-      >
-        <div class="h-16 w-16 bg-secondary rounded-full" />
+      <div class="flex flex-col justify-center items-center">
+        <div class="h-16 w-16 bg-secondary rounded-full lg:h-20 lg:w-20" />
+
         <div
-          class="lg:flex lg:flex-col lg:items-start lg:justify-center lg:ml-7"
+          class="text-xl text-title-500 flex justify-center items-center mt-4"
         >
-          <div
-            class="text-xl text-title-500 flex justify-center items-center mt-4"
-          >
-            <span class="mr-3">Karim Saif</span>
-            <icon
-              name="edit"
-              class="text-xs cursor-pointer"
-              :class="'text-primary-500 hover:text-primary-700'"
-            />
-          </div>
-          <div class="text-xs text-title-300 mt-2 mb-6">
-            An ask joined from 2022.05.01
-          </div>
+          <span class="mr-3">Karim Saif</span>
+          <icon
+            name="edit"
+            class="text-xs cursor-pointer"
+            :class="'text-primary-500 hover:text-primary-700'"
+          />
+        </div>
+        <div class="text-xs text-title-300 mt-2 mb-6">
+          An ask joined from 2022.05.01
         </div>
       </div>
       <div class="w-full h-full flex flex-row justify-evenly">

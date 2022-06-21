@@ -7,6 +7,7 @@ const routes = [
       {
         path: '',
         component: () => import("../components/Home.vue"),
+        props: route => ({ query: route.query.type })
       },
       {
         path: ':id',

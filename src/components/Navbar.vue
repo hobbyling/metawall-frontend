@@ -55,7 +55,7 @@
       </div>
     </div>
     <div class="flex items-center justify-end">
-      <icon name="search" />
+      <Searchbar />
       <icon name="add" class="ml-5 cursor-pointer" @click="openModalPost()" />
       <div class="rounded w-6 h-6 bg-secondary ml-5" />
     </div>
@@ -63,6 +63,7 @@
 </template>
 
 <script setup>
+import Searchbar from "./Searchbar.vue";
 import { reactive, ref } from "@vue/reactivity";
 import modalStore from "./../stores/modalStore";
 const modal = modalStore();
