@@ -12,24 +12,36 @@
       bottom-0
     "
   >
-    <div
+    <router-link
       v-for="(item, key) in tabs"
       :key="'tool-bar-' + key"
-      @click="pathTo(item)"
-      class="cursor-pointer"
+      :to="item.link"
+      @click.native="switchTabMain(item.icon)"
     >
       <icon
         :name="item.icon"
         class="w-6 h-6"
-        :color="activeTab === item.icon ? '#FF9A9E' : ''"
+        :class="[
+          'hover:text-primary-500',
+          {
+            'text-primary-500': tabMain === item.icon,
+            'text-title-300': tabMain !== item.icon,
+          },
+        ]"
       />
-    </div>
+    </router-link>
   </div>
 </template>
 
 <script setup>
 import { ref } from "@vue/reactivity";
 import { useRouter } from "vue-router";
+import { storeToRefs } from "pinia";
+import tabStore from "./../stores/tabStore";
+const tab = tabStore();
+const { switchTabMain } = tab;
+const { tabMain } = storeToRefs(tab);
+
 const router = useRouter();
 const tabs = ref([
   {
@@ -38,32 +50,13 @@ const tabs = ref([
   },
   {
     icon: "hot",
-    link: "/",
+    link: "/hot",
   },
   {
     icon: "time",
-    link: "/",
-  },
-  {
-    icon: "user",
-    link: "/profile",
+    link: "/old",
   },
 ]);
-
-const activeTab = ref("home");
-
-const pathTo = (param) => {
-  activeTab.value = param.icon;
-
-  if (param.link === "time") {
-    router.push({
-      path: param.link,
-      query: "new",
-    });
-  }
-
-  router.push(param.link);
-};
 </script>
 
 <style lang="scss" scoped>

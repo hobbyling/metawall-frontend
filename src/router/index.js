@@ -7,11 +7,24 @@ const routes = [
       {
         path: '',
         component: () => import("../components/Home.vue"),
-        props: route => ({ query: route.query.type })
       },
       {
-        path: ':id',
+        path: '/hot',
+        component: () => import("../components/Home.vue"),
+      },
+      {
+        path: '/old',
+        component: () => import("../components/Home.vue"),
+      },
+      {
+        path: '/:id',
         component: () => import("../components/pages/Profile.vue"),
+        children: [
+          {
+            path: '/likes',
+            component: () => import("../components/Card.vue"),
+          }
+        ]
       },
     ]
   },

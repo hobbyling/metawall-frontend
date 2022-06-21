@@ -4,9 +4,12 @@
       <div class="rounded-full w-10 h-10 bg-secondary" />
       <div class="flex flex-col justify-center items-start ml-5">
         <span class="text-left">Karim Saif</span>
-        <span class="text-left text-xs text-title-500 hover:text-primary-500"
-          >View your profile</span
+        <router-link
+          to="/profile"
+          class="text-left text-xs text-title-500 hover:text-primary-500"
         >
+          View your profile
+        </router-link>
       </div>
     </div>
 

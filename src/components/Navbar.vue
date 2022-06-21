@@ -18,9 +18,10 @@
       <img src="/src/assets/metawall.png" alt="logo" class="h-[42px]" />
     </router-link>
     <div class="items-center justify-between hidden w-1/2 h-full lg:flex">
-      <div
-        v-for="i in tabs.length"
-        :key="'tab-' + i"
+      <router-link
+        v-for="(item, key) in tabs"
+        :key="`tabs-${key}`"
+        :to="item.link"
         class="
           relative
           h-full
@@ -30,14 +31,17 @@
           w-1/3
           cursor-pointer
         "
-        :class="{ active: activeTab === tabs[i - 1] }"
-        @click="activeTab = tabs[i - 1]"
+        :class="{ active: tabMain === item.icon }"
+        @click.native="switchTabMain(item.icon)"
       >
         <icon
-          :name="tabs[i - 1]"
+          :name="item.icon"
           :class="[
             'hover:text-primary-500',
-            { 'text-primary-500': activeTab === tabs[i - 1] },
+            {
+              'text-primary-500': tabMain === item.icon,
+              'text-title-300': tabMain !== item.icon,
+            },
           ]"
         />
         <div
@@ -52,7 +56,7 @@
             duration-200
           "
         />
-      </div>
+      </router-link>
     </div>
     <div class="flex items-center justify-end">
       <Searchbar />
@@ -64,14 +68,30 @@
 
 <script setup>
 import Searchbar from "./Searchbar.vue";
+import { storeToRefs } from "pinia";
 import { reactive, ref } from "@vue/reactivity";
 import modalStore from "./../stores/modalStore";
+import tabStore from "./../stores/tabStore";
 const modal = modalStore();
+const tab = tabStore();
 const { openModalPost } = modal;
+const { switchTabMain } = tab;
+const { tabMain } = storeToRefs(tab);
 
-const tabs = ref(["home", "hot", "time"]);
-
-const activeTab = ref("home");
+const tabs = ref([
+  {
+    icon: "home",
+    link: "/",
+  },
+  {
+    icon: "hot",
+    link: "/hot",
+  },
+  {
+    icon: "time",
+    link: "/old",
+  },
+]);
 </script>
 
 <style lang="scss" scoped>
