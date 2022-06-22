@@ -1,7 +1,7 @@
 <template>
   <svg
     :class="[svgClass, addClass]"
-    class="ease-in duration-200"
+    class="ease-in duration-200 w-5 h-5"
     v-bind="$attrs"
     :style="{ width: size.width, height: size.height }"
   >
@@ -25,8 +25,8 @@ const props = defineProps({
     type: Object,
     default() {
       return {
-        width: "1.2em",
-        height: "1.2em",
+        // width: "1.2em",
+        // height: "1.2em",
       };
     },
   },

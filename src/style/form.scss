@@ -36,6 +36,10 @@
     @apply checked:bg-primary-500 checked:border-primary-900;
     @apply focus:outline-none;
   }
+
+  input[type="file"]{
+      // display: none
+  }
   
   form .form-check-label {
     @apply inline-block text-title-500;
