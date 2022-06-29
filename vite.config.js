@@ -4,5 +4,7 @@ import { svgBuilder } from './src/plugins/svgBuilder';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), svgBuilder('./src/assets/icons/svg/')]
+  plugins: [vue(), svgBuilder('./src/assets/icons/svg/')],
+
+  base: process.env.NODE_ENV === 'production' ? './' : '/'
 })

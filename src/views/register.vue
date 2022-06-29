@@ -99,7 +99,7 @@ const signUp = async () => {
 <style lang="scss" scoped>
 .bg-img,
 .img-side {
-  background: no-repeat url("src/assets/login-bg.png");
+  background: no-repeat url("/src/assets/login-bg.png");
   background-size: cover;
 }
 
